@@ -25,11 +25,30 @@
 				<version>3.2.0</version>
 			</plugin>
 			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-			</plugin>
+  <groupId>org.mule.tools.maven</groupId>
+  <artifactId>mule-maven-plugin</artifactId>
+  <version>4.0.0</version>
+  <extensions>true</extensions>
+  <configuration>
+    <cloudHubDeployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <muleVersion>${app.runtime}</muleVersion>
+      <connectedAppClientId>d49aa1e93c93415c9c36eca10e3a1b3a</connectedAppClientId>
+      <connectedAppClientSecret>Db0e0D502F7c4B7282988F1E774AEd33</connectedAppClientSecret>
+      <connectedAppGrantType>client_credentials</connectedAppGrantType>
+      <username>shivanshsingh</username>
+      <password>Mule@5344</password>
+      <applicationName>firstrepo</applicationName>
+      <environment>Sandbox</environment>
+      <region>us-east-1</region>
+      <workers>1</workers>
+      <workerType>MICRO</workerType>
+      <properties>
+        <key>value</key>
+      </properties>
+    </cloudHubDeployment>
+  </configuration>
+</plugin>
 		</plugins>
 	</build>
 
